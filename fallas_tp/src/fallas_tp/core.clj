@@ -1,4 +1,4 @@
-(ns tp-fallas.core
+(ns fallas-tp.core
   (:gen-class))
 
 (defn -main

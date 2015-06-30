@@ -1,6 +1,6 @@
-(ns tp-fallas.core-test
+(ns fallas-tp.core-test
   (:require [clojure.test :refer :all]
-            [tp-fallas.core :refer :all]))
+            [fallas-tp.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

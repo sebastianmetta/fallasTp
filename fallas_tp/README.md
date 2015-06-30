@@ -1,4 +1,4 @@
-# tp-fallas
+# fallas_tp
 
 FIXME: description
 
@@ -10,7 +10,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar tp-fallas-0.1.0-standalone.jar [args]
+    $ java -jar fallas_tp-0.1.0-standalone.jar [args]
 
 ## Options
 
