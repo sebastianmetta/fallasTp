@@ -1,15 +1,18 @@
 (ns fallas-tp.core
   (:gen-class))
 
-(println "Bienvenido al sistema experto para el diagnóstico de causas ante fallas en equipos de refrigeración.")
-(println "Ingrese el tipo de equipo de refrigeración a diagnosticar:")
+(println "*******************************BIENVENIDO*******************************************")
+(println "Sistema experto para el diagnóstico de causas de fallas en equipos de refrigeración.")
+(println "************************************************************************************")
+
+;TODO: Poner en una función
+(println "Por favor, ingrese el tipo de equipo de refrigeración a diagnosticar:")
 (println "1. Refrigeracion Familiar")
 (println "2. Refrigeracion Comercial")
 (println "3. Aire acondicionado")
-(println ":")
 
 (def tipoDeEquipo (read-line))
-
+;TODO: Hacer un while para validar opcion correcta o salir.
 (if (= tipoDeEquipo "1")
   (println "Seleccionado Refrigeración Famililar"))
 (if (= tipoDeEquipo "2")
