@@ -404,8 +404,8 @@
 
 })
 
-;TODO: Descomentar para la entrega el metodo main
-;(defn -main [& args]
+
+(defn -main [& args]
 	(println "*******************************BIENVENIDO*******************************************")
 	(println "Sistema experto para el diagnóstico de fallas en equipos de refrigeración.")
 	(println "************************************************************************************")
@@ -414,21 +414,21 @@
 	(println (str tE_RF ". Refrigeracion Familiar."))
 	(println (str tE_RC ". Refrigeracion Comercial."))
 	(println (str tE_AA ". Aire acondicionado."))
-	(println (str opcion_salir ". Salir del sistema."))
-	(def tipoDeEquipo (read-line))
+  (println (str opcion_salir ". Salir del sistema."))
+  (def tipoDeEquipo (read-line))
 	(println (str "Opción seleccionada: " tipoDeEquipo))
 	
-	(println "")
-	(println "Por favor, ingrese el tipo de falla del equipo:") 
+   (println "")
+   (println "Por favor, ingrese el tipo de falla del equipo:") 
 	(println (str tF_EL ". Falla eléctrica."))
 	(println (str tF_ME ". Falla mecánica."))
 	(println (str opcion_salir ". Salir del sistema."))
 	(def tipoDeFalla (read-line))
-	(println (str "Opción seleccionada: " tipoDeFalla))
+   (println (str "Opción seleccionada: " tipoDeFalla))
 
-	(println "")
+  (println "")
 	(println "Por favor, ingrese el tipo de falla del equipo:")
-	(println (str f_EnfMucho ". El equipo enfría mucho."))
+  (println (str f_EnfMucho ". El equipo enfría mucho."))
 	(println (str f_EnfPoco ". El equipo enfría poco."))
 	(println (str f_FugaCorr ". El equipo presenta fuga de corriente eléctrica."))
 	(println (str f_Ruidos ". El equipo realiza ruidos anormales."))
@@ -440,14 +440,13 @@
 	(println (str f_MotoArrancaCortaProt ". El motocompresor del equipo inicia y el protector térmico se corta."))
 	(println (str f_Gotea ". otea agua hacia el interior del equipo."))
 	(println (str f_HieloEvaporador ". Se forma hielo en el evaporador."))
-	(println (str opcion_salir ". Salir del sistema."))
+  (println (str opcion_salir ". Salir del sistema."))
 	(def falla (read-line))
 	(println (str "Opción seleccionada: " falla))
  
- (println "Las posibles causas y soluciones al problema son:")
- 
- (defn parse-int [s]
+  (defn parse-int [s]
    (Integer. (re-find  #"\d+" s )))
  
- (base [(parse-int tipoDeEquipo) (parse-int tipoDeFalla) (parse-int falla)])
-;)
+  (println "Las posibles causas y soluciones al problema son:")
+  (base [(parse-int tipoDeEquipo) (parse-int tipoDeFalla) (parse-int falla)])
+)
