@@ -448,5 +448,9 @@
    (Integer. (re-find  #"\d+" s )))
  
   (println "Las posibles causas y soluciones al problema son:")
-  (base [(parse-int tipoDeEquipo) (parse-int tipoDeFalla) (parse-int falla)])
+  (def result (base [(parse-int tipoDeEquipo) (parse-int tipoDeFalla) (parse-int falla)]))
+  
+  (let [idv (map vector (iterate inc 0) result)]
+  (doseq [[index value] idv] (println value)))
+  
 )
