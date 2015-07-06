@@ -64,7 +64,9 @@
 ["Termostato con bulbo fuera de la posicion original " "El bulbo suelto produce que el sistema no corte superando el frio que soporta la aislacion termica " "colocar el bulbo en la posicion original (final del evaporador)"]
 ]
 
-[tE_RF f_FormaEscarcha tF_EL] ["Sistema de descongelado deteriorado  " "Se procude excesiva acumulacion de hielo en la parte interna del gabinete " " Verificar conexión electrica y estado de componenetes (temporizador, fusible, resistencia, comando, etc) "]
+[tE_RF f_FormaEscarcha tF_EL] [
+["Sistema de descongelado deteriorado  " "Se procude excesiva acumulacion de hielo en la parte interna del gabinete " " Verificar conexión electrica y estado de componenetes (temporizador, fusible, resistencia, comando, etc) "]
+]
 
 [tE_RF f_AltoConsumo tF_EL] [
 ["Error en la conexión electrica " "Daño enla conexión electrica " "Verificar conexión electrica y aislacion de la misma"]
@@ -153,7 +155,9 @@
 ["Motocompresor con baja capacidad (gastado) " "Un motocompresor gastado o deteriorado genera un consumo elevado de corriente " "Reemplazar el motocrompresor"]
 ]
 
-[tE_RF f_MotoNoArrancaCortaProt tF_ME] ["Motocompresor deteriorado mecánicamente " "Un motocompresor dañado mecanicamente que no arranca genera un consumo elevado de corriente que es detectado por el protector termico (motocompresor clavado) " "Reemplazar el motocrompresor"]
+[tE_RF f_MotoNoArrancaCortaProt tF_ME] [
+ ["Motocompresor deteriorado mecánicamente " "Un motocompresor dañado mecanicamente que no arranca genera un consumo elevado de corriente que es detectado por el protector termico (motocompresor clavado) " "Reemplazar el motocrompresor"]
+ ]
 
 [tE_RF f_MotoArrancaCortaProt tF_ME] [
 ["Obstrucción parcial de la cañería " "Un obstruccion parcial de la cañeria genera un exceso en la presion de alta aumentando el consumo de corriente que es detectado por el protecto termico " "Realizar una deshidratacion del sistema mediante bomba de vacio para eliminar la humedad. Luego debe recargase el sistema con gas por completo"]
@@ -394,7 +398,9 @@
 ["Motocompresor inadecuado al sistema " "Un motocompresor inadecuado al sistema genera un consumo elevado de corriente " "Reemplazar el motocrompresor por el adecuado"]
 ]
 
-[tE_AA f_MotoNoArrancaCortaProt tF_ME] ["Motocompresor deteriorado mecánicamente " "Un motocompresor dañado mecanicamente que no arranca genera un consumo elevado de corriente que es detectado por el protector termico (motocompresor clavado) " "Reemplazar el motocrompresor"]
+[tE_AA f_MotoNoArrancaCortaProt tF_ME] [
+["Motocompresor deteriorado mecánicamente " "Un motocompresor dañado mecanicamente que no arranca genera un consumo elevado de corriente que es detectado por el protector termico (motocompresor clavado) " "Reemplazar el motocrompresor"]
+]
 
 [tE_AA f_MotoArrancaCortaProt tF_ME] [
 ["Obstrucción parcial de la cañería " "Un obstruccion parcial de la cañeria genera un exceso en la presion de alta aumentando el consumo de corriente que es detectado por el protecto termico " "Realizar una deshidratacion del sistema mediante bomba de vacio para eliminar la humedad. Luego debe recargase el sistema con gas por completo"]

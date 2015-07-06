@@ -9,7 +9,7 @@
 ;Se definen las opciones para validar el input del usuario.
 (def tEquipo_opcionesValidas [opcion-salir (str tE_RF) (str tE_RC) (str tE_AA)])
 (def tFalla_opcionesValidas [opcion-salir (str tF_EL) (str tF_ME)])
-(def falla_opcionesValidas [opcion-salir (str f_EnfMucho) (str f_EnfPoco) (str f_FugaCorr) (str f_Ruidos) (str f_Transpira) (str f_FormaEscarcha) (str f_AltoConsumo) (str f_MotoNoArranca) (str f_MotoNoArrancaCortaProt) (str f_MotoArrancaCortaProt f_Gotea f_HieloEvaporador)])
+(def falla_opcionesValidas [opcion-salir (str f_EnfMucho) (str f_EnfPoco) (str f_FugaCorr) (str f_Ruidos) (str f_Transpira) (str f_FormaEscarcha) (str f_AltoConsumo) (str f_MotoNoArranca) (str f_MotoNoArrancaCortaProt) (str f_MotoArrancaCortaProt) (str f_Gotea) (str f_HieloEvaporador)])
 
 
 (defn pedir-usuario-tipo-equipo []
@@ -56,21 +56,23 @@
 	(println "A continuacion se presentan las posibles causas de la falla, su descripción y solución:")
 	(println "***************************************************************************************")
   (def result (reglas [(parse-int tipoDeEquipo) (parse-int falla) (parse-int tipoDeFalla)]))
- 
+
   (let [idv (map vector (iterate inc 0) result)]
-  (doseq [[index value] idv]
-    (let [idv1 (map vector (iterate inc 0) value)]
-      (doseq [[index1 value1] idv1]
-         (case index1
-				  0 (println (str "Causa: " value1))
-				  1 (println (str "Motivo: " value1))
-				  2 (println (str "Solucion: " value1)))
-         )
-      (println "")
+    (doseq [[index value] idv]
+      (let [idv1 (map vector (iterate inc 0) value)]
+        (doseq [[index1 value1] idv1]
+          (case index1
+            0 (println (str "Causa: " value1))
+            1 (println (str "Motivo: " value1))
+            2 (println (str "Solucion: " value1)))
+          )
+          (println "")
+          )
       )
     )
   )
-)
+
+
 
 (defn flujo-principal []
  (println "*******************************BIENVENIDO*******************************************")
@@ -98,8 +100,12 @@
     (def falla (pedir-usuario-falla))
     )
   (if (= opcion-salir falla) (salir-sistema))
-    
- (mostrar-resultados tipo-de-equipo falla tipo-de-falla)
+ 
+ (def result (reglas [(parse-int tipo-de-equipo) (parse-int falla) (parse-int tipo-de-falla)]))
+ (if (empty? result) 
+    (println "No se cuentan con posibles causas a la falla en la base de datos.")
+    (mostrar-resultados tipo-de-equipo falla tipo-de-falla)
+ )
  
  (println "¿Desea reiniciar el proceso (s/n)?")
  (def rta (read-line))
